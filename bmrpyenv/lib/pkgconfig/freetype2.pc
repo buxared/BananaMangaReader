@@ -1,0 +1,12 @@
+prefix="/usr"
+exec_prefix="/usr"
+libdir="/usr/lib/arm-linux-gnueabihf"
+includedir="/usr/include/freetype2"
+
+Name: FreeType 2
+Description: A free, high-quality, and portable font engine.
+Version: 17.1.11
+Requires:
+Libs: -L${libdir} -lfreetype
+Libs.private: -lz  -lpng12 
+Cflags: -I${includedir}
