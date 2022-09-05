@@ -672,3 +672,11 @@ may consider it more useful to permit linking proprietary applications with
 the library.  If this is what you want to do, use the GNU Lesser General
 Public License instead of this License.  But first, please read
 <https://www.gnu.org/licenses/why-not-lgpl.html>.
+
+=============================================================================
+
+Banana Managa Reader uses a BASH script to launch the software, which was 
+inspired by WebPortal, developed by frostschutz, 2015. Although it was not
+released under any license, acknowledgements are provided.
+
+=============================================================================
