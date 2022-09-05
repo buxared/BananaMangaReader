@@ -57,7 +57,8 @@ I have developed and tested the application on a Kobo Libra 2, which is the only
 Go to <a href="#">mobileread</a> for more details and to ask questions
 
 ## Acknowlegements
-Many thanks to all the developers of <a href="https://github.com/pgaskin/NickelMenu">NickelMenu</a> for creating a tool that allows us to experiment with our Kobos
+Many thanks to all the developers of <a href="https://github.com/pgaskin/NickelMenu">NickelMenu</a> for creating a tool that allows us to experiment with our Kobos. 
+
 The idea of using the browser and the startup script were inspired by the <a href="https://www.mobileread.com/forums/showthread.php?t=262353">WebPortal</a> project by <a href="https://github.com/frostschutz">frostschutz</a>
 
 ## Leave a Tip!
