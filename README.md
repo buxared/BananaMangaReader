@@ -55,7 +55,7 @@ I have developed and tested the application on a Kobo Libra 2, which is the only
 4. Sometimes, when opening a manga chapter, the screen will be blank except for a small box with a "?" in the middle of the screen. Hitting the refresh icon of the browser will solve this problem. This seems to happen because some times the program jumps to the next step without completing the current step (starts to show image without actually fetching it first)
 
 ## More
-Go to <a href="#">mobileread</a> for more details and to ask questions
+Go to <a href="https://www.mobileread.com/forums/showthread.php?t=348950">mobileread</a> for more details and to ask questions
 
 ## Acknowlegements
 Many thanks to all the developers of <a href="https://github.com/pgaskin/NickelMenu">NickelMenu</a> for creating a tool that allows us to experiment with our Kobos. 
