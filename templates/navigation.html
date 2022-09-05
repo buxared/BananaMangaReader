@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<!--
+
+Banana Manga Reader, also referred to as BMR, is a software designed 
+to read manga on Kobo eReaders.
+
+Copyright (C) 2022  buxared
+
+This file is a part of Banana Manga Reader.
+
+Banana Manga Reader is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+Banana Manga Reader is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see <https://www.gnu.org/licenses/>
+
+-->
+<html>
+<head>
+<title>Banana Manga Reader: Navigation</title>
+<link rel="stylesheet" type="text/css" href="{{url_for("static", filename="style/navstyle2.css")}}">
+<style>
+</style>
+</head>
+<body>
+<div class="hamburger-menu">
+    <input id="menu__toggle" type="checkbox" />
+    <label class="menu__btn" for="menu__toggle">
+    <span></span>
+    </label>
+
+    <ul class="menu__box">
+        <li><a class="menu__item" href="/">Home</a></li>
+        <li><a class="menu__item" href="/search">Search Manga</a></li>
+    	<li><a class="menu__item" href="/favorites">Favorites</a></li>
+		<li><a class="menu__item" href="/library">Library</a></li>
+		<li><a class="menu__item" href="/nav">Navigation</a></li>
+		<li><a class="menu__item" href="/about">About</a></li>
+		<li><a class="menu__item" href="/shutdown">Close app</a></li>
+    </ul>
+</div>
+
+<h1>Navigating through BMR</h1>
+<div style="height:auto;width:100%;border:1px solid #ccc;font:16px/26px Georgia, Garamond, Serif;">
+<p>
+This page describes the various screens or pages you will come across while using the BMR app and how to navigate across them by using the menu.
+</p>
+<p>
+<h3>Home Page</h3>
+The app opens in the Home page, which lets you access other pages of interest from the hamburger menu (three lines) in the top left corner of the screen.
+</p>
+<p>
+<h3>Search Page</h3>
+Clicking on Search Manga in the menu, takes you to the "search page" where you can search for a manga using the form. You will only get the top 20 results, so make sure you use some good key words.<br>
+The results of the search will be displayed in a new page. You can click on a manga title to view more details, or make a new search here.
+</p>
+<p>
+<h3>Manga Home Page</h3>
+Clicking on a manga title from the search results takes you to the "Manga Home" or the manga title page. Here you can see more details about the manga and scroll through the list of available chapters.
+From this page, using the menu option, you can add this manga to your favorites list.
+</p>
+<p>
+<h3>Online Reader</h3>
+Clicking on a chapter title from the Manga Home takes you to the "Online Reader". Here you can actually read the manga chapter.
+Note that clciking on the left side of the page takes you to the next page. Clicking on the right will take you to the previous page.
+The menu opens by clicking in the center of the screen. You can go back to the Manga Home, go to the next or previous chapter or select other options from the menu. More details below.
+</p>
+<p>
+<h3>Favorites Page</h3>
+From any page, clicking on "Favorites" in the menu takes you to the "Favorites" page, where you can see a list of the manga titles you have added. 
+Clicking on these titles takes you to the "Manga Home" for that title. If you click on the "Remove" button, you can delete the title from your favorites.
+You can expand your favorites list by using "Add to favorites" from the menu when on the "Manga Home" page.
+Alternatively, you can manually add manga titles to your favorites. To do this, plug your device to a computer and navigate to .BMR/static and open the mangafavs.csv file.
+This file should contain the manga title in the first column and a url to the manga title page from mangakakalot.com or manganato.com
+</p>
+<p>
+<h3>Library Home Page</h3>
+From any page, clicking on "Library" in the menu takes you to the "Library Home" page, where you can see a list of the manga titles whose chapters you have downloaded. 
+You can manually add manga to your Library by making a new folder for your manga title under the "library" folder in ".BMR/static" after connecting your Kobo to your computer.
+Make sure the folder structure looks like this: manga_title >> chapter_title >> (inside the chapter title you should have images with file names in ascending order)
+Also make sure that none of these characters are in the manga_title: '.', '(space)', '"', '?', '>', '<', '/' , '|', '\', '*', ':', '\0' Instead use underscores '_'
+</p>
+<p>
+<h3>Library Manga Home</h3>
+Clicking on a title from the library home takes you to the "Libray Manga Home" for that title. Here, you can view a list of the chapters you have downloaded for this particular manga.
+Click on a chapter title to read that chapter in the "Offline Reader"
+</p>
+<p>
+<h3>Offline Reader</h3>
+The "Offline Reader" functions the same as the online reader described above. The only difference is in the menu options, described below.
+</p>
+<p>
+<h3>Navigation</h3>
+From any page, you can click "Navigation" from the menu to open this page.
+</p>
+<p>
+<h3>About Page</h3>
+From any page, you can click "About" from the menu to open the About page. Here you can learn more about the app.
+</p>
+<p>
+<h3>Shut down</h3>
+From any page, you can click "Close app" from the menu to initiate app shut down. You should always do this before closing the browser. This stops the internal server from using CPU resources to serve pages on the localhost.
+</p>
+<p>
+<h3>Menu Options</h3>
+Although Banana Manga Reader (BMR) opens in the web browser, you are encouraged to use the menu options to navigate instead of using the back or forward buttons of the browser.
+</p>
+<p>
+The menu is always accessible reagrdless of which part of the app is open. With the exception of the reader, where you actually read manga, the menu can be opened by clicking on the hamburger menu button in the top left corner of the screen.
+For the reader, you can open the menu by clicking in the center of the page.
+The menu will always have the following options:<br>
+<ul>
+<li>Home: opens the home page</li>
+<li>Search Manga: opens the search page, from where you can look up manga titles</li>
+<li>Favorites: opens the favorites page, which will display any manga titles you have added to the list</li>
+<li>Library: opens the Library home, which displays any manga titles whose chapters have been downloaded</li>
+<li>Navigation: opens the this page, which explains how to naviagte and use BMR</li>
+<li>About: learn more about BMR</li>
+<li>Close app: Clicking this button will close the app. Always do this before closing your browser to save CPU resources</li>
+</ul>
+<br>
+The menu can be closed by clicking the "-" in the top left corner, or the "Close Menu" button (for the readers).
+</p>
+<p>
+Certain pages will provide additional menu options:
+</p>
+<p>
+<h4>Manga Title page:</h4>
+This is the page that opens up when you click on a manga title from the search results or from the favorites page.
+Clicking on the menu here, will show you one more menu item: "Add to favorites" Clicking on this will add the manga title to your favorites list, which can be opened by clicking "Favorites" from the menu.
+</p>
+<p>
+<h4>Online Reader page:</h4>
+This is the page that opens up when you click on a manga chapter from the manga title page when browsing online and opens the actual manga pages/panels for reading.
+Clicking on the menu here (tap the center of the screen), will show you some more menu items:<br>
+<ul>
+<li>">> Chapter >>" (next chapter): Clicking on this will let you jump to the next available chapter of the manga. If no chapter is available, it will go to the manga title page.</li>
+<li>"<< Chapter <<" (previous chapter): Clicking on this will let you jump to the previous chapter of the manga. If no chapter is available, it will go to the manga title page.</li>
+<li>"Manga Home": Clicking on this will take you to the manga title page, where you can see other details of the manga and open a different chapter from the list.</li>
+<li>"Add to Library" Clicking on this will add the manga chapter to your Library, which can be opened by clicking "Library" from the menu.</li>
+</ul>
+</p>
+<p>
+<h4>Offline Reader page:</h4>
+This is the page that opens up when you click on a manga chapter from the manga title page in the "Library" and opens the actual manga pages/panels for reading.
+Clicking on the menu here (tap the center of the screen), will show you some more menu items:<br>
+<ul>
+<li>">> Chapter >>" (next chapter): Clicking on this will let you jump to the next available chapter of the manga. If no chapter is available, it will go to the manga title page.</li>
+<li>"<< Chapter <<" (previous chapter): Clicking on this will let you jump to the previous chapter of the manga. If no chapter is available, it will go to the manga title page.</li>
+<li>"Manga Home": Clicking on this will take you to the manga title page, where you can see other details of the manga and open a different chapter from the list.</li>
+</ul>
+</p>
+<p>
+Navigating the app should be easy and intuitive once you know what each menu option does.<br>
+Happy Reading! Go Bananas!!
+</p>
+</div>
+</body>
+</html>

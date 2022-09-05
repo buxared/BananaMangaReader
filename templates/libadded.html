@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<!--
+
+Banana Manga Reader, also referred to as BMR, is a software designed 
+to read manga on Kobo eReaders.
+
+Copyright (C) 2022  buxared
+
+This file is a part of Banana Manga Reader.
+
+Banana Manga Reader is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+Banana Manga Reader is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see <https://www.gnu.org/licenses/>
+
+-->
+<html>
+<head>
+<title>Banana Manga Reader: Library</title>
+<link rel="stylesheet" type="text/css" href="{{url_for("static", filename="style/navstyle2.css")}}">
+<style>
+</style>
+</head>
+<body>
+<div class="hamburger-menu">
+    <input id="menu__toggle" type="checkbox" />
+    <label class="menu__btn" for="menu__toggle">
+    <span></span>
+    </label>
+
+    <ul class="menu__box">
+        <li><a class="menu__item" href="/">Home</a></li>
+        <li><a class="menu__item" href="/search">Search Manga</a></li>
+    	<li><a class="menu__item" href="/favorites">Favorites</a></li>
+		<li><a class="menu__item" href="/library">Library</a></li>
+		<li><a class="menu__item" href="/nav">Navigation</a></li>
+		<li><a class="menu__item" href="/about">About</a></li>
+		<li><a class="menu__item" href="/shutdown">Close app</a></li>
+    </ul>
+</div>
+
+<h1>Added to Library</h1>
+<br><br><br>
+{{c}} has been added to Library!<br>
+You can view it under the title "{{t}}"<br>
+Navigate to your library by clicking "Library" in the menu.
+<br><br>
+<center>
+<form action="{{manga_home_link}}">
+    <button type="submit">Back to manga</button>
+</form>
+</center>
+</body>
+</html>
