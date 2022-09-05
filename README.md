@@ -63,5 +63,5 @@ Many thanks to all the developers of <a href="https://github.com/pgaskin/NickelM
 The idea of using the browser and the startup script were inspired by the <a href="https://www.mobileread.com/forums/showthread.php?t=262353">WebPortal</a> project by <a href="https://github.com/frostschutz">frostschutz</a>
 
 ## Leave a Tip!
-If you enjoyed using Banana Manga Reader, leave a nice comment on the mobileread page. Better yet, leave me a tip in my tip jar! As a novice in python, html and Linux, it took me many hours and many months to get here. BMR will always remain free, so consider donating. Thanks! 
+If you enjoyed using Banana Manga Reader, leave a nice comment on the mobileread page. Better yet, leave me a tip in my tip jar! (paypal: buxared14@gmail.com) As a novice in python, HTML and Linux, it took me many hours and many months to get here. BMR will always remain free, so consider donating. Thanks! 
 ## I hope you have fun using Banana Manga Reader! Go Bananas !!
