@@ -40,7 +40,8 @@ Once you have installed BMR, you can launch the app by performing the following 
 You will need to be connected to a network to open the application, since it works using the kobo browser. (You do not need an internet connection. Connecting to a network without internet access seems to work) 
 
 ## Uninstall BMR
-To uninstall BMR, connect your Kobo to your computer and navigate to KOBOeReader/.BMR and create a file (any type) called "uninstall"
+To uninstall BMR, connect your Kobo to your computer and navigate to KOBOeReader/.BMR and create a file (any type) called "uninstall".
+Next, run the startup script from your Kobo: go to nickel menu and select Start BMR server.
 This will remove BMR and all of the contents of KOBOeReader/.BMR. Any downloaded contents will be lost. Make a backup of the KOBOeReader/.BMR/static/library directory to keep your downloads.
 To remove the NickelMenu entries, you will have to open the config file from KOBOeReader/.adds/nm/ and remove the entries manually.
 
