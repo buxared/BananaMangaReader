@@ -6,7 +6,7 @@ The app was built entirely with python for the back end, since this is the only 
 ## Features
 1. Allows you to read manga from online sources. (currently just mangakakalot)
 2. Allows you to add titles to a favorites list for easy access.
-3. Allows you to save chapters for offline reading. (Although you will need to be connected to a network for opening the browser, you do not have to be connected to the internet. For example, connecting a mobile hotspot without internet tethering works well)
+3. Allows you to save chapters for offline reading. (Although you will need to be connected to a network for opening the browser, you do not have to be connected to the internet. For example, connecting to a mobile hotspot without internet tethering works well)
 4. Manga reading should be a smooth experience. No obstructive elements will be on the screen while reading a manga chapter. Tapping on the left or right side will flip the pages (left turn to go to the next page). Tapping in the center opens up the menu.
 5. You can add your own manga to the library. On the microSD card, navigate to KOBOeReader/.BMR/static/library Here, you can create a folder with the manga title as it's name. Inside this folder, add folders with chapter titles, which will have the pages stored in png/jpg image formats. Extracting CBR or CBZ files should give you this structure. [library>manga title> chapter title> images]
 6. All of the files and programs remain on the  mnt/onboard partition of the device. No files are placed on the root (/) partition or the /usr partition. This way updating, deleting files and making any changes (backing up files, editing htmls or the python script for personalization or improvement) is safer and easier.
