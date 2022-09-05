@@ -1,0 +1,13 @@
+#menu_item:<location>:<label>:<action>:<arg>
+
+#Set up BMR server
+menu_item :main    :Start BMR server   :cmd_spawn          :quiet:sh /mnt/onboard/.BMR/BMRrun.sh
+    chain_success                      :dbg_msg            :Banana Manga Reader server started and should be up and running in 3 seconds. Click 'Open BMR' from nickel menu or go to http://banana:1234/
+#Open BMR
+menu_item :main    :Open BMR           :nickel_browser     :modal:http://banana:1234/
+
+
+
+#BONUS: in case nothing works
+#Open mangakakalot in popup browser, uncomment (remove "#") the line below
+#menu_item :main    :MangaKakalot       :nickel_browser     :modal:https://mangakakalot.com/
