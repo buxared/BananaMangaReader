@@ -33,7 +33,7 @@ You are now ready to use Banana Manga Reader!
 Once you have installed BMR, you can launch the app by performing the following steps:
 1. Open NickelMenu on your Kobo eReader and select "Start BMR server". Click "OK".
 2. Open NickelMenu on your Kobo eReader and select "Open BMR".
-3. Enjoy! More details and instructions for use can be found under "Navigation" from the hamburger menu in the top right corner of the application/browser window.
+3. Enjoy! More details and instructions for use can be found under "Navigation" from the hamburger menu in the top left corner of the application/browser window.
 4. Make sure you always exit the app by navigating to "Close app" from the hamburger menu. Press the "Shut down" button. (Not shutting down this way will keep the BMR server running in the background. You don't want there to be multiple instances using up CPU resources when you start BMR again next time. So, it's best to close the app this way)
 
 ### Note:
