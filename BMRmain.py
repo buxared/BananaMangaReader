@@ -488,7 +488,7 @@ def shutdown():
         os.system('ip addr del 127.0.0.42/32 dev lo')
         
         # shutdown_server()
-        os.system('pkill -15 python3')
+        os.system('pkill -15 -f "BMR"')
         return flask.render_template('shutdown.html')
     else:
         return flask.render_template('shutdown.html')
