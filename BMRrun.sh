@@ -4,7 +4,7 @@
 set -e
 
 # uninstall
-if [ -e /mnt/onboard/.BMR/uninstall ]
+if [ -e /mnt/onboard/.BMR/uninstall.* ]
 then
     rm -rf /mnt/onboard/.BMR
     sed -r -e '/^127\.0\.0\.42\s.*/d' -i /etc/hosts
