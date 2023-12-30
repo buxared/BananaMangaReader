@@ -82,10 +82,6 @@ def ShowRes(srch):
             manga_last_ch=split_string[10].split('"')[1].split('_')[-1]
         elif "readmanganato.com" in manga_url:
             manga_last_ch=split_string[10].split('"')[3].split('-')[-1]
-        elif "chapmanganato.to" in manga_url:
-            manga_last_ch=split_string[10].split('"')[3].split('-')[-1]
-        else:
-            manga_last_ch='not found'
 
         manga_author=r1[i+1].split('<span>Author(s)')[1].split(':')[1].split('<')[0].strip()
         manga_update=r1[i+1].split('<span>Updated')[1].split(':')[1].split(' ')[1]
@@ -151,19 +147,6 @@ def GetMangaData(usr_choice):
                                                 'ch_update': ch_update}
             
     elif 'readmanganato.com' in manga_data['url']:
-        ch_data=data2.split('<li class="a-h">')
-        n_ch=len(ch_data)-1
-        for i in range(n_ch):
-            each_ch_string=ch_data[i+1].split('\n')
-            ch_link=each_ch_string[1].split('"')[5]
-            ch_num=ch_link.split('-')[-1]
-            ch_title=each_ch_string[1].split('"')[7]
-            ch_update=each_ch_string[3].split('"')[3].split(' ')[0]+each_ch_string[3].split('"')[3].split(' ')[1]
-            manga_data['ch_list'][str(ch_num)]={'ch_link': ch_link,
-                                                'ch_title': ch_title,
-                                                'ch_update': ch_update}
-            
-    elif 'chapmanganato.to' in manga_data['url']:
         ch_data=data2.split('<li class="a-h">')
         n_ch=len(ch_data)-1
         for i in range(n_ch):
@@ -511,5 +494,4 @@ def shutdown():
         return flask.render_template('shutdown.html')
 
 # if __name__=="__main__":
-#     app.run(host='127.0.0.42', port=1234) #Alternative code to run; Must change last line in BMRrun.sh to: "/mnt/onboard/.BMR/bmrpyenv/bin/python3 BMRmain.py
-#     app.run(host='0.0.0.0', port=1234) #For desktop only, do not run on Kobo
+#     app.run(host='127.0.0.42', port=1234)
