@@ -79,11 +79,11 @@ def ShowRes(srch):
         manga_url=split_string[1].split('"')[3]
         manga_title=split_string[2].split('"')[3]
         if "mangakakalot.com" in manga_url:
-            manga_last_ch=split_string[10].split('"')[1].split('_')[-1]
+            manga_last_ch=split_string[11].split('"')[1].split('_')[-1]
         elif "readmanganato.com" in manga_url:
-            manga_last_ch=split_string[10].split('"')[3].split('-')[-1]
+            manga_last_ch=split_string[11].split('"')[3].split('-')[-1]
         elif "chapmanganato.to" in manga_url:
-            manga_last_ch=split_string[10].split('"')[3].split('-')[-1]
+            manga_last_ch=split_string[11].split('"')[3].split('-')[-1]
         else:
             manga_last_ch='not found'
 
@@ -117,8 +117,15 @@ def GetMangaData(usr_choice):
     manga_data['description']=data2.split('"description"')[1].split('"')[1].replace('&quot;','"').replace("&#39;","'")
     
     #get manga cover image
+    #    first clear old image file
+    try:
+        os.remove('static/manga_cover/manga_cover.jpg')
+    except:
+        pass
     manga_cover_link=data2.split('"og:image" content')[1].split('"')[1]
-    manga_data['cover_img_link']=manga_cover_link
+    manga_cover_response=requests.get(manga_cover_link, verify=True)
+    manga_cover=Image.open(io.BytesIO(manga_cover_response.content)).convert('RGB')
+    manga_cover.save('static/manga_cover/manga_cover.jpg')
     
     #get genres:
     manga_data['genres']=[]
@@ -171,7 +178,10 @@ def GetMangaData(usr_choice):
             ch_link=each_ch_string[1].split('"')[5]
             ch_num=ch_link.split('-')[-1]
             ch_title=each_ch_string[1].split('"')[7]
-            ch_update=each_ch_string[3].split('"')[3].split(' ')[0]+each_ch_string[3].split('"')[3].split(' ')[1]
+            try:
+                ch_update=each_ch_string[3].split('"')[5].split(' ')[0]+each_ch_string[3].split('"')[5].split(' ')[1]
+            except:
+                ch_update="0000"
             manga_data['ch_list'][str(ch_num)]={'ch_link': ch_link,
                                                 'ch_title': ch_title,
                                                 'ch_update': ch_update}
@@ -499,6 +509,11 @@ def shutdown():
         dir2clear = 'static/chapter_cache'
         for f in os.listdir(dir2clear):
             os.remove(os.path.join(dir2clear, f))
+            
+        try:
+            os.remove('static/manga_cover/manga_cover.jpg')
+        except:
+            pass
             
         # return ip to what it was
         os.system('ip addr del 127.0.0.1/8 dev lo')
