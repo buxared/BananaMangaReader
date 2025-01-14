@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--
 
-Banana Manga Reader, also referred to as BMR, is a software designed 
+Banana Manga Reader, also referred to as BMR, is an application designed 
 to read manga on Kobo eReaders.
 
 Copyright (C) 2022  buxared
@@ -65,7 +65,7 @@ Genres: {% for genre in manga_data['genres']: %}{{genre}},{% endfor %}
 <td>
 {{manga_data['description']}} ...Read more <a href="{{manga_data['url']}}">here</a>
 </td>
-<td><img src="{{manga_data['cover_img_link']}}"></td>
+<td><img src="{{url_for("static", filename="manga_cover/manga_cover.jpg")}}"></td>
 </tr>
 </table>
 
