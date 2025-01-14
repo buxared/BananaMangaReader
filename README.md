@@ -29,6 +29,16 @@ The app was built entirely with python for the back end, since this is the only 
 
 You are now ready to use Banana Manga Reader!
 
+## Updating
+1. Connect your Kobo to your computer and Navigate to KOBOeReader
+2. If you wish to retain your manga library and favorites, make a copy your library folder (KOBOeReader/.BMR/static/library) and favorites (KOBOeReader/.BMR/static/mangafavs.csv) to a different location on your computer.
+3. From the pane on the right, go to the <a href="https://github.com/buxared/BananaMangaReader/releases">Releases</a> page or select the latest release. Download the file named "[Release date]_BMR_v[latest version].zip", for example "250113_BMR_v0.3.zip".
+4. Unzipping the file should give you a folder named ".BMR". Copy this folder to the root of your microSD card. (The root is the KOBOeReader folder. Simply drag ".BMR" to KOBOeReader). This will replace the older .BMR folder with the new one. Alternatively, you can manually delete the .BMR folder in the KOBOeReader folder and copy over the new one obtained by unzipping the downloaded zip file.
+5. Move the manga library and favorites to the newly replaced .BMR folder in the same locations. The manga library "library" folder favorites "mangafavs.csv" should both be moved to the KOBOeReader/.BMR/static/ folder
+6. Safely eject your eReader from your computer.
+
+The application has now been updated.
+
 ## Launching and Using BMR
 Once you have installed BMR, you can launch the app by performing the following steps:
 1. Open NickelMenu on your Kobo eReader and select "Start BMR server". Click "OK".
