@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 # have job exit if any command returns with non-zero exit status (aka failure)
 set -e
